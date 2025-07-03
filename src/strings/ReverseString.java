@@ -19,11 +19,13 @@ public class ReverseString {
     public static void main(String[] args) {
         String originalString = "Hello, World!";
 
-        String reverserStringUsingStringBuilder = ReverseStringUsingStringBuilder(originalString);
-        String reverserStringUsingStringBuffer = ReverseStringUsingStringBuffer(originalString);
+        String reverseStringUsingStringBuilder = ReverseStringUsingStringBuilder(originalString);
+        String reverseStringUsingStringBuffer = ReverseStringUsingStringBuffer(originalString);
+        String reverseStringUsingCharArray = ReverseStringUsingCharArray(originalString);
 
-        System.out.println("Reverse String using StringBuilder is : "+ reverserStringUsingStringBuilder);
-        System.out.println("Reverse String using StringBuffer is : "+ reverserStringUsingStringBuffer);
+        System.out.println("Reverse String using StringBuilder is : "+ reverseStringUsingStringBuilder);
+        System.out.println("Reverse String using StringBuffer is : "+ reverseStringUsingStringBuffer);
+        System.out.println("Reverse String using CharArray is : "+ reverseStringUsingCharArray);
     }
 
     /**
@@ -44,5 +46,18 @@ public class ReverseString {
     private static String ReverseStringUsingStringBuffer(String str){
         StringBuffer stringBuffer = new StringBuffer(str);
         return stringBuffer.reverse().toString();
+    }
+
+    /**
+     * This method is using char array to reverse string
+     * @param str
+     * @return
+     */
+    private static String ReverseStringUsingCharArray(String str){
+        char[] charArr = new char[str.length()];
+        for(int i=0;i<str.length();i++){
+            charArr[i] = str.charAt(str.length()-i-1);
+        }
+        return String.valueOf(charArr);
     }
 }
