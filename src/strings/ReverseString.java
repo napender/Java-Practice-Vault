@@ -9,10 +9,7 @@ import java.util.Arrays;
  * Difficulty: Easy
  *
  * Notes:
- * This class provides three different methods to reverse a string in Java.
- * 1. Iterative approach using a for loop.
- * 2. Using the built-in StringBuilder class.
- * 3. A recursive approach.
+ * This class provides different methods to reverse a string in Java.
  */
 public class ReverseString {
 
